@@ -181,15 +181,18 @@ section {
 }
 
 /* ================= CONTACT ================= */
-.contact-icons {
+.contact-icons-bottom {
+  position: fixed;
+  bottom: 20px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
   gap: 40px;
-  margin-top: 30px;
+  z-index: 1000;
 }
 
-.contact-icons a {
-  background: rgba(0, 119, 255, 0.2);
+.contact-icons-bottom a {
+  background: rgba(0,119,255,0.2);
   padding: 22px;
   border-radius: 50%;
   box-shadow: 0 0 30px rgba(0,119,255,0.6);
@@ -197,12 +200,12 @@ section {
   transition: 0.3s;
 }
 
-.contact-icons a:hover {
+.contact-icons-bottom a:hover {
   transform: scale(1.2);
   box-shadow: 0 0 45px rgba(0,119,255,0.9);
 }
 
-.contact-icons img {
+.contact-icons-bottom img {
   width: 60px;
 }
 
@@ -291,15 +294,18 @@ section {
 
 <section id="contact">
   <h2>Contact</h2>
-  <div class="contact-icons">
-    <a href="https://github.com/vatsalvarma" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-    </a>
-    <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
-    </a>
-  </div>
+  <!-- Removed icons from top, placed inside a new div at bottom -->
 </section>
+
+<!-- Footer-like Contact Icons at Bottom -->
+<div class="contact-icons-bottom">
+  <a href="https://github.com/vatsalvarma" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+  </a>
+  <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+  </a>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
