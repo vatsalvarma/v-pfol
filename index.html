@@ -27,7 +27,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 15px 60px;
-  background: linear-gradient(90deg, #0077ff, #7f00ff);
+  background: linear-gradient(90deg, #0077ff, #0099ff);
   box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,6 @@ nav {
 
 nav h2 {
   color: white;
-  letter-spacing: 1px;
 }
 
 nav ul {
@@ -56,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ================= SECTIONS ================= */
@@ -75,7 +74,6 @@ section {
 
 .home-text h1 {
   font-size: 65px;
-  color: black;
 }
 
 .home-text h1 span {
@@ -85,13 +83,12 @@ section {
 .home-text p {
   font-size: 18px;
   margin: 20px 0;
-  max-width: 520px;
 }
 
 .btn {
   display: inline-block;
   padding: 14px 35px;
-  background: linear-gradient(135deg,#0077ff,#7f00ff);
+  background: #0077ff;
   color: white;
   border-radius: 30px;
   text-decoration: none;
@@ -102,12 +99,11 @@ section {
 
 .btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 15px 40px rgba(127,0,255,0.7);
+  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
 }
 
 .home-img img {
   width: 550px;
-  max-width: 100%;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -117,49 +113,38 @@ section {
   100% { transform: translateY(0); }
 }
 
-/* ================= HEADINGS ================= */
-#about h2,
-#projects h2,
-#skills h2,
-#contact h2 {
-  font-size: 36px;
-  color: #0077ff;
-  margin-bottom: 20px;
-}
-
 /* ================= SKILLS ================= */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 35px;
+  gap: 30px;
   margin-top: 40px;
 }
 
 .skill-box {
-  width: 120px;
-  height: 120px;
-  background: rgba(0, 119, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
+  width: 110px;
+  height: 110px;
+  background: rgba(0,119,255,0.12);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,119,255,0.4);
   animation: float 4s ease-in-out infinite;
-  box-shadow: 0 0 25px rgba(127,0,255,0.4);
-}
-
-.skill-box img {
-  width: 65px;
+  transition: 0.3s;
 }
 
 .skill-box:hover {
-  transform: translateY(-20px) scale(1.15);
+  transform: translateY(-15px) scale(1.1);
   box-shadow: 0 0 40px rgba(0,119,255,0.8);
 }
 
-/* Resume Button */
+.skill-box img {
+  width: 60px;
+}
+
+/* DOWNLOAD BUTTON */
 .resume-btn {
   margin-top: 50px;
   text-align: center;
@@ -167,17 +152,18 @@ section {
 
 .resume-btn a {
   padding: 15px 45px;
-  border-radius: 30px;
-  background: linear-gradient(135deg,#0077ff,#7f00ff);
+  background: #0077ff;
   color: white;
+  border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 25px rgba(127,0,255,0.6);
-  transition: 0.4s;
+  box-shadow: 0 0 25px rgba(0,119,255,0.6);
+  transition: 0.3s;
 }
 
 .resume-btn a:hover {
   transform: scale(1.15);
+  box-shadow: 0 0 40px rgba(0,119,255,0.9);
 }
 
 /* ================= PROJECTS ================= */
@@ -189,41 +175,37 @@ section {
 }
 
 .project {
-  background: rgba(0, 119, 255, 0.12);
-  backdrop-filter: blur(12px);
+  background: rgba(0,119,255,0.12);
   padding: 25px;
-  border-radius: 18px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,119,255,0.4);
   transition: 0.4s;
-  animation: float 4s ease-in-out infinite;
-  box-shadow: 0 0 25px rgba(0,119,255,0.4);
 }
 
 .project:hover {
-  transform: translateY(-18px) scale(1.05);
-  box-shadow: 0 0 40px rgba(127,0,255,0.7);
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 40px rgba(0,119,255,0.8);
 }
 
 /* ================= CONTACT ================= */
 .contact-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 60px;
-  margin-top: 60px;
+  gap: 40px;
+  margin-top: 30px;
 }
 
 .contact-icons a {
-  background: rgba(0, 119, 255, 0.2);
-  backdrop-filter: blur(15px);
-  padding: 25px;
+  background: rgba(0,119,255,0.2);
+  padding: 22px;
   border-radius: 50%;
-  animation: float 3.5s ease-in-out infinite;
-  box-shadow: 0 0 30px rgba(127,0,255,0.6);
-  transition: 0.4s;
+  box-shadow: 0 0 30px rgba(0,119,255,0.6);
+  animation: float 3s ease-in-out infinite;
 }
 
 .contact-icons a:hover {
-  transform: scale(1.25);
+  transform: scale(1.2);
+  box-shadow: 0 0 45px rgba(0,119,255,0.9);
 }
 
 .contact-icons img {
@@ -270,9 +252,7 @@ section {
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
-    I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React.
-  </p>
+  <p>I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications.</p>
 </section>
 
 <section id="skills">
@@ -291,6 +271,7 @@ section {
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
   </div>
 
+  <!-- DOWNLOAD BUTTON -->
   <div class="resume-btn">
     <a href="resume.pdf" download>Download Resume</a>
   </div>
