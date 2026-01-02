@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vatsal Varma | Portfolio</title>
 
-<!-- AOS Animation -->
-<link href="dev.png" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
 <style>
 * {
@@ -38,7 +37,6 @@ nav {
 
 nav h2 {
   color: white;
-  letter-spacing: 1px;
 }
 
 nav ul {
@@ -52,12 +50,12 @@ nav ul li a {
   color: white;
   font-weight: 600;
   padding: 6px 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.25);
 }
 
 /* ================= SECTIONS ================= */
@@ -76,17 +74,19 @@ section {
 
 .home-text h1 {
   font-size: 65px;
+  color: black; /* CHANGED */
+}
+
+.home-text span {
   color: #0077ff;
 }
 
 .home-text p {
   font-size: 18px;
   margin: 20px 0;
-  max-width: 520px;
 }
 
 .btn {
-  display: inline-block;
   padding: 14px 35px;
   background: #0077ff;
   color: white;
@@ -98,14 +98,11 @@ section {
 }
 
 .btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
+  transform: scale(1.08);
 }
 
-/* BIGGER IMAGE */
 .home-img img {
-  width: 550px; /* INCREASED SIZE */
-  max-width: 100%;
+  width: 520px;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -115,19 +112,39 @@ section {
   100% { transform: translateY(0); }
 }
 
-/* ================= ABOUT ================= */
-#about h2,
-#projects h2,
-#contact h2 {
-  font-size: 36px;
-  color: #0077ff;
-  margin-bottom: 20px;
+/* ================= SKILLS ================= */
+#skills {
+  text-align: center;
 }
 
-#about p {
-  max-width: 800px;
-  font-size: 18px;
-  line-height: 1.7;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.skill {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0,119,255,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 3s ease-in-out infinite;
+  transition: 0.4s;
+}
+
+.skill:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 35px #0077ff;
+}
+
+.skill img {
+  width: 50px;
 }
 
 /* ================= PROJECTS ================= */
@@ -148,24 +165,47 @@ section {
 
 .project:hover {
   transform: translateY(-12px);
-  box-shadow: 0 0 30px rgba(0,119,255,0.4);
+  box-shadow: 0 0 30px rgba(0,119,255,0.5);
 }
 
-.project h3 {
-  color: #0077ff;
-  margin-bottom: 10px;
+/* LONG PROJECT CARDS */
+.long-project {
+  grid-column: span 2;
+  padding: 35px;
+  background: #111;
+  color: white;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.long-project:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px #0077ff;
+}
+
+/* ================= PROJECT SHOWCASE ================= */
+#project-showcase img {
+  width: 100%;
+  border-radius: 20px;
+  border: 4px solid #0077ff;
 }
 
 /* ================= CONTACT ================= */
-#contact p {
-  font-size: 18px;
-  margin: 10px 0;
+#contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-#contact a {
-  color: #0077ff;
-  font-weight: 600;
-  text-decoration: none;
+#contact-icons a img {
+  width: 60px;
+  animation: float 3s ease-in-out infinite;
+  transition: 0.3s;
+}
+
+#contact-icons a img:hover {
+  transform: scale(1.3);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -173,10 +213,6 @@ section {
   #home {
     flex-direction: column;
     text-align: center;
-  }
-
-  .home-img img {
-    width: 320px;
   }
 }
 </style>
@@ -189,84 +225,88 @@ section {
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#project-showcase">Project-Showcase</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section id="home">
   <div class="home-text" data-aos="fade-right">
-    <h1>Hi, I'm Vatsal Varma</h1>
-    <p>
-      Full Stack Java Developer skilled in building scalable applications using
-      Java, Spring Boot, React, and modern web technologies.
-    </p>
+    <h1>Hi, I'm <span>Vatsal Varma</span></h1>
+    <p>Full Stack Java Developer building scalable modern applications.</p>
     <a href="#projects" class="btn">View My Work</a>
   </div>
 
   <div class="home-img" data-aos="fade-left">
-    <img src="dev.png" alt="Developer">
+    <img src="dev.png">
   </div>
 </section>
 
-<section id="about" data-aos="fade-up">
-  <h2>About Me</h2>
-  <p>
-    I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React.
-I have completed my B.E. in Computer Science & Engineering (2024) from Visvesvaraya Technological University, and gained real-world development experience during my internship at Kodnest, where I worked on full-stack projects involving RESTful APIs, databases, and modern frontend frameworks.
-My technical expertise includes:
-Backend development with Spring Boot, Spring Security, Hibernate, and JPA
-Frontend development using React, HTML, CSS, and Bootstrap
-Database management with MySQL and MongoDB
-Building scalable and maintainable applications using microservices architecture
-Version control and deployment using Git, Github, Docker, and basic AWS services
-I have worked on multiple real-world projects such as:
-An E-Commerce Platform with authentication, cart, and order management
-A Job Application System built using microservices
-A Real-Time Chat Application using WebSockets
-A Task Management System using Spring Boot and Thymeleaf
-I am always eager to learn new technologies, improve my problem-solving skills, and contribute to innovative software solutions. I am currently seeking opportunities where I can grow as a developer and work on impactful, production-level applications.
-
-    SOME OF MY WORKS:
-<p>1. <a href="https://vatsalvarma.github.io/v-ecom.github.io/">E-Commerce website(V-STORE)</a></p>    
-  </p>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
+  </div>
 </section>
 
 <section id="projects">
-  <h2 data-aos="fade-up">Projects</h2>
+  <h2>Projects</h2>
 
   <div class="projects-grid">
-    <div class="project" data-aos="zoom-in">
+    <!-- existing -->
+    <div class="project"><h3>E-Commerce</h3></div>
+    <div class="project"><h3>Job Portal</h3></div>
+    <div class="project"><h3>Chat App</h3></div>
+    <div class="project"><h3>Task Manager</h3></div>
+
+    <!-- new -->
+    <div class="long-project">
       <h3>E-Commerce Website</h3>
-      <p>React + Spring Boot based platform with authentication and order management.</p>
+      <a href="https://vatsalvarma.github.io/v-ecom.github.io/" target="_blank">Visit Project</a>
     </div>
 
-    <div class="project" data-aos="zoom-in">
-      <h3>Job Application System</h3>
-      <p>Microservices-based system with REST APIs and scalable architecture.</p>
+    <div class="long-project">
+      <h3>Job Portal</h3>
+      <a href="https://vatsalvarma.github.io/v-jobportal/" target="_blank">Visit Project</a>
     </div>
 
-    <div class="project" data-aos="zoom-in">
-      <h3>Todo List Application</h3>
-      <p>Task management app using Spring Boot and Thymeleaf.</p>
-    </div>
-
-    <div class="project" data-aos="zoom-in">
-      <h3>Real-Time Chat App</h3>
-      <p>WebSocket-based chat application with authentication.</p>
+    <div class="long-project">
+      <h3>Game Store</h3>
+      <a href="https://vatsalvarma.github.io/v-gamestore/" target="_blank">Visit Project</a>
     </div>
   </div>
 </section>
 
-<section id="contact" data-aos="fade-up">
+<section id="project-showcase">
+  <h2>Project Showcase</h2>
+  <img src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif">
+</section>
+
+<section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:varmavatsal26@gmail.com">varmavatsal26@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/vatsalvarma" target="_blank">github.com/vatsalvarma</a></p>
+  <div id="contact-icons">
+    <a href="https://github.com/vatsalvarma" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+    </a>
+    <a href="https://linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+    </a>
+  </div>
 </section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ duration: 1000, once: true });
+AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>
