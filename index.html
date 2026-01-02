@@ -27,7 +27,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 15px 60px;
-  background: linear-gradient(90deg, #0077ff, #00c6ff);
+  background: linear-gradient(90deg, #0077ff, #7f00ff);
   box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* ================= SECTIONS ================= */
@@ -91,7 +91,7 @@ section {
 .btn {
   display: inline-block;
   padding: 14px 35px;
-  background: #0077ff;
+  background: linear-gradient(135deg,#0077ff,#7f00ff);
   color: white;
   border-radius: 30px;
   text-decoration: none;
@@ -101,8 +101,8 @@ section {
 }
 
 .btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(127,0,255,0.7);
 }
 
 .home-img img {
@@ -117,7 +117,7 @@ section {
   100% { transform: translateY(0); }
 }
 
-/* ================= ABOUT ================= */
+/* ================= HEADINGS ================= */
 #about h2,
 #projects h2,
 #skills h2,
@@ -132,29 +132,52 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
   margin-top: 40px;
 }
 
 .skill-box {
-  width: 110px;
-  height: 110px;
-  background: #f8f8f8;
-  border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 119, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 25px rgba(127,0,255,0.4);
 }
 
 .skill-box img {
-  width: 60px;
+  width: 65px;
 }
 
 .skill-box:hover {
-  transform: translateY(-15px) scale(1.1);
-  box-shadow: 0 0 30px rgba(0,119,255,0.6);
+  transform: translateY(-20px) scale(1.15);
+  box-shadow: 0 0 40px rgba(0,119,255,0.8);
+}
+
+/* Resume Button */
+.resume-btn {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.resume-btn a {
+  padding: 15px 45px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#0077ff,#7f00ff);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(127,0,255,0.6);
+  transition: 0.4s;
+}
+
+.resume-btn a:hover {
+  transform: scale(1.15);
 }
 
 /* ================= PROJECTS ================= */
@@ -166,34 +189,45 @@ section {
 }
 
 .project {
-  background: #f9f9f9;
+  background: rgba(0, 119, 255, 0.12);
+  backdrop-filter: blur(12px);
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 18px;
   transition: 0.4s;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 25px rgba(0,119,255,0.4);
 }
 
 .project:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 0 35px rgba(0,119,255,0.5);
+  transform: translateY(-18px) scale(1.05);
+  box-shadow: 0 0 40px rgba(127,0,255,0.7);
 }
 
 /* ================= CONTACT ================= */
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
+  align-items: center;
+  gap: 60px;
+  margin-top: 60px;
 }
 
-.contact-icons a img {
+.contact-icons a {
+  background: rgba(0, 119, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 50%;
+  animation: float 3.5s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(127,0,255,0.6);
+  transition: 0.4s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.25);
+}
+
+.contact-icons img {
   width: 60px;
-  animation: float 3s ease-in-out infinite;
-  transition: 0.3s;
-}
-
-.contact-icons a img:hover {
-  transform: scale(1.2);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -241,9 +275,9 @@ section {
   </p>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
+
   <div class="skills-grid">
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div>
@@ -255,6 +289,10 @@ section {
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
+  </div>
+
+  <div class="resume-btn">
+    <a href="resume.pdf" download>Download Resume</a>
   </div>
 </section>
 
