@@ -37,6 +37,7 @@ nav {
 
 nav h2 {
   color: white;
+  letter-spacing: 1px;
 }
 
 nav ul {
@@ -74,6 +75,7 @@ section {
 
 .home-text h1 {
   font-size: 65px;
+  color: black;
 }
 
 .home-text h1 span {
@@ -83,6 +85,7 @@ section {
 .home-text p {
   font-size: 18px;
   margin: 20px 0;
+  max-width: 520px;
 }
 
 .btn {
@@ -98,12 +101,13 @@ section {
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
   box-shadow: 0 15px 40px rgba(0,119,255,0.7);
 }
 
 .home-img img {
   width: 550px;
+  max-width: 100%;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -111,6 +115,16 @@ section {
   0% { transform: translateY(0); }
   50% { transform: translateY(-18px); }
   100% { transform: translateY(0); }
+}
+
+/* ================= HEADINGS ================= */
+#about h2,
+#projects h2,
+#skills h2,
+#contact h2 {
+  font-size: 36px;
+  color: #0077ff;
+  margin-bottom: 20px;
 }
 
 /* ================= SKILLS ================= */
@@ -125,45 +139,23 @@ section {
 .skill-box {
   width: 110px;
   height: 110px;
-  background: rgba(0,119,255,0.12);
+  background: rgba(0, 119, 255, 0.12);
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
   box-shadow: 0 0 20px rgba(0,119,255,0.4);
   animation: float 4s ease-in-out infinite;
-  transition: 0.3s;
-}
-
-.skill-box:hover {
-  transform: translateY(-15px) scale(1.1);
-  box-shadow: 0 0 40px rgba(0,119,255,0.8);
 }
 
 .skill-box img {
   width: 60px;
 }
 
-/* DOWNLOAD BUTTON */
-.resume-btn {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.resume-btn a {
-  padding: 15px 45px;
-  background: #0077ff;
-  color: white;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 0 25px rgba(0,119,255,0.6);
-  transition: 0.3s;
-}
-
-.resume-btn a:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 40px rgba(0,119,255,0.9);
+.skill-box:hover {
+  transform: translateY(-15px) scale(1.1);
+  box-shadow: 0 0 35px rgba(0,119,255,0.7);
 }
 
 /* ================= PROJECTS ================= */
@@ -175,15 +167,16 @@ section {
 }
 
 .project {
-  background: rgba(0,119,255,0.12);
+  background: rgba(0, 119, 255, 0.12);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,119,255,0.4);
   transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,119,255,0.4);
+  animation: float 4s ease-in-out infinite;
 }
 
 .project:hover {
-  transform: translateY(-15px) scale(1.05);
+  transform: translateY(-15px) scale(1.03);
   box-shadow: 0 0 40px rgba(0,119,255,0.8);
 }
 
@@ -196,11 +189,12 @@ section {
 }
 
 .contact-icons a {
-  background: rgba(0,119,255,0.2);
+  background: rgba(0, 119, 255, 0.2);
   padding: 22px;
   border-radius: 50%;
   box-shadow: 0 0 30px rgba(0,119,255,0.6);
   animation: float 3s ease-in-out infinite;
+  transition: 0.3s;
 }
 
 .contact-icons a:hover {
@@ -252,12 +246,13 @@ section {
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications.</p>
+  <p>
+    I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React.
+  </p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-
   <div class="skills-grid">
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div>
@@ -269,11 +264,6 @@ section {
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
-  </div>
-
-  <!-- DOWNLOAD BUTTON -->
-  <div class="resume-btn">
-    <a href="resume.pdf" download>Download Resume</a>
   </div>
 </section>
 
