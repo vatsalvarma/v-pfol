@@ -1,253 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vatsal Varma | Portfolio</title>
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-  font-family:"Segoe UI",sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* ===== FULLSCREEN BACKGROUND IMAGE + OVERLAY ===== */
-body{
-  background:url("bg.jpg") center/cover fixed no-repeat;
-  color:#222;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:rgba(255,255,255,0.92);
-  z-index:-1;
+body {
+  background: #ffffff;
+  color: #222;
 }
 
 /* ================= NAVBAR ================= */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:15px 60px;
-  background:linear-gradient(90deg,#0077ff,#0099ff);
-  box-shadow:0 4px 20px rgba(0,119,255,0.4);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:1000;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 60px;
+  background: linear-gradient(90deg, #0077ff, #0099ff);
+  box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-nav h2{color:#fff}
-
-nav ul{
-  display:flex;
-  gap:25px;
-  list-style:none;
+nav h2 {
+  color: white;
+  letter-spacing: 1px;
 }
 
-nav ul li a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  padding:6px 10px;
-  border-radius:6px;
-  transition:.3s;
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
-nav ul li a:hover{
-  background:rgba(255,255,255,.2);
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ================= SECTIONS ================= */
-section{
-  padding:120px 10%;
-  min-height:100vh;
+section {
+  padding: 120px 10%;
+  min-height: 100vh;
 }
 
 /* ================= HOME ================= */
-#home{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:50px;
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-.home-text h1{
-  font-size:65px;
-  color:black;
+.home-text h1 {
+  font-size: 65px;
+  color: black;
 }
 
-.home-text h1 span{
-  color:#0077ff;
+.home-text h1 span {
+  color: #0077ff;
 }
 
-.home-text p{
-  font-size:18px;
-  margin:20px 0;
-  max-width:520px;
+.home-text p {
+  font-size: 18px;
+  margin: 20px 0;
+  max-width: 520px;
 }
 
-.btn{
-  display:inline-block;
-  padding:14px 35px;
-  background:#0077ff;
-  color:#fff;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-  box-shadow:0 10px 25px rgba(0,119,255,.4);
+.btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #0077ff;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,119,255,0.4);
 }
 
-.btn:hover{
-  transform:scale(1.07);
-  box-shadow:0 15px 40px rgba(0,119,255,.7);
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
 }
 
-.home-img img{
-  width:550px;
-  max-width:100%;
-  animation:float 3s ease-in-out infinite;
+.home-img img {
+  width: 550px;
+  max-width: 100%;
+  animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-18px)}
-  100%{transform:translateY(0)}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
 }
 
 /* ================= HEADINGS ================= */
 #about h2,
-#skills h2,
 #projects h2,
-#showcase h2,
-#contact h2{
-  font-size:36px;
-  color:#0077ff;
-  margin-bottom:20px;
+#skills h2,
+#contact h2 {
+  font-size: 36px;
+  color: #0077ff;
+  margin-bottom: 20px;
 }
 
-/* ================= ABOUT ================= */
-#about p{
-  line-height:1.8;
-  margin-bottom:15px;
+/* ================= SKILLS (IMAGE STYLE CLUSTER) ================= */
+.skills-grid {
+  position: relative;
+  width: 520px;
+  height: 520px;
+  margin: 80px auto;
 }
 
-/* ================= SKILLS (CIRCULAR FLOAT) ================= */
-.skills-circle{
-  position:relative;
-  width:420px;
-  height:420px;
-  margin:80px auto;
+.skill-box {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(145deg, #0a6bff, #2aa1ff);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 35px rgba(0,119,255,0.45);
+  animation: float 4s ease-in-out infinite;
 }
 
-.skills-circle .skill-box{
-  position:absolute;
-  width:90px;
-  height:90px;
-  background:rgba(0,119,255,.15);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  animation:orbit 14s linear infinite;
-  box-shadow:0 0 25px rgba(0,119,255,.6);
+.skill-box img {
+  width: 48px;
 }
 
-.skills-circle img{
-  width:45px;
-}
+/* manual placement (like image) */
+.skill-box:nth-child(1) { top: 40%; left: 40%; transform: scale(1.2); }
+.skill-box:nth-child(2) { top: 15%; left: 45%; }
+.skill-box:nth-child(3) { top: 25%; left: 65%; }
+.skill-box:nth-child(4) { top: 45%; left: 70%; }
+.skill-box:nth-child(5) { top: 65%; left: 60%; }
+.skill-box:nth-child(6) { top: 70%; left: 40%; }
+.skill-box:nth-child(7) { top: 55%; left: 20%; }
+.skill-box:nth-child(8) { top: 30%; left: 20%; }
+.skill-box:nth-child(9) { top: 10%; left: 30%; }
+.skill-box:nth-child(10){ top: 75%; left: 25%; }
 
-@keyframes orbit{
-  from{transform:rotate(0deg) translateX(190px) rotate(0deg)}
-  to{transform:rotate(360deg) translateX(190px) rotate(-360deg)}
+/* Resume Button */
+.resume-btn {
+  margin-top: 60px;
+  text-align: center;
 }
-
-.skills-circle .skill-box:nth-child(1){animation-delay:0s}
-.skills-circle .skill-box:nth-child(2){animation-delay:1s}
-.skills-circle .skill-box:nth-child(3){animation-delay:2s}
-.skills-circle .skill-box:nth-child(4){animation-delay:3s}
-.skills-circle .skill-box:nth-child(5){animation-delay:4s}
-.skills-circle .skill-box:nth-child(6){animation-delay:5s}
-.skills-circle .skill-box:nth-child(7){animation-delay:6s}
-.skills-circle .skill-box:nth-child(8){animation-delay:7s}
-.skills-circle .skill-box:nth-child(9){animation-delay:8s}
-.skills-circle .skill-box:nth-child(10){animation-delay:9s}
 
 /* ================= PROJECTS ================= */
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:40px;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.project{
-  background:rgba(0,119,255,.12);
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 0 20px rgba(0,119,255,.4);
-  animation:float 4s ease-in-out infinite;
-  transition:.4s;
+.project {
+  background: rgba(0, 119, 255, 0.12);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,119,255,0.4);
+  animation: float 4s ease-in-out infinite;
 }
 
-.project:hover{
-  transform:translateY(-15px) scale(1.03);
-  box-shadow:0 0 40px rgba(0,119,255,.8);
-}
-
-/* ================= SHOWCASE ================= */
-#showcase{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-
-.showcase-box{
-  padding:30px;
-  background:rgba(0,119,255,.12);
-  border-radius:20px;
-  box-shadow:0 0 40px rgba(0,119,255,.6);
-}
-
-.showcase-box img{
-  width:420px;
-  border-radius:15px;
-  border:4px solid #0077ff;
-  box-shadow:0 0 35px rgba(0,119,255,.8);
+.project:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 0 40px rgba(0,119,255,0.8);
 }
 
 /* ================= CONTACT ================= */
-.contact-icons{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:80px;
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
 }
 
-.contact-icons a{
-  background:rgba(0,119,255,.2);
-  padding:22px;
-  border-radius:50%;
-  box-shadow:0 0 30px rgba(0,119,255,.6);
-  animation:float 3s ease-in-out infinite;
+.contact-icons a {
+  background: rgba(0,119,255,0.2);
+  padding: 22px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0,119,255,0.6);
+  animation: float 3s ease-in-out infinite;
 }
 
-.contact-icons img{width:40px}
+.contact-icons img {
+  width: 40px;
+}
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:900px){
-  #home{flex-direction:column;text-align:center}
-  .skills-circle{transform:scale(.8)}
-  .showcase-box img{width:300px}
+@media(max-width: 900px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-img img {
+    width: 320px;
+  }
+  .skills-grid {
+    transform: scale(0.8);
+  }
 }
 </style>
 </head>
@@ -261,7 +237,6 @@ section{
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#showcase">Work / Project Showcase</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -273,19 +248,18 @@ section{
     <a href="#projects" class="btn">View My Work</a>
   </div>
   <div class="home-img">
-    <img src="dev.png">
+    <img src="dev.png" alt="Developer">
   </div>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React. I have completed my B.E. in Computer Science & Engineering (2024) from Visvesvaraya Technological University, and gained real-world development experience during my internship at Kodnest.</p>
-  <p>I have worked on real-world projects including E-Commerce platforms, Job portals, Real-time chat apps and more. I am eager to learn new technologies and work on production-level applications.</p>
+  <p> I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React. I have completed my B.E. in Computer Science & Engineering (2024) from Visvesvaraya Technological University, and gained real-world development experience during my internship at Kodnest, where I worked on full-stack projects involving RESTful APIs, databases, and modern frontend frameworks.</p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="skills-circle">
+  <div class="skills-grid">
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
@@ -297,23 +271,14 @@ section{
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
     <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
   </div>
+
+  <div class="resume-btn">
+    <a href="Vatsal_Varma_Resume.pdf" download class="btn">Download Resume</a>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="projects-grid">
-    <div class="project"><h3>E-Commerce Website</h3><p>React + Spring Boot based platform with authentication.</p></div>
-    <div class="project"><h3>Job Application System</h3><p>Microservices-based job portal.</p></div>
-    <div class="project"><h3>Todo Application</h3><p>Task management using Spring Boot.</p></div>
-    <div class="project"><h3>Chat Application</h3><p>Real-time chat using WebSockets.</p></div>
-  </div>
-</section>
-
-<section id="showcase">
-  <h2>Work / Project Showcase</h2>
-  <div class="showcase-box">
-    <img src="showcase.gif">
-  </div>
 </section>
 
 <section id="contact">
@@ -327,9 +292,6 @@ section{
     </a>
   </div>
 </section>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({duration:1000,once:true});</script>
 
 </body>
 </html>
