@@ -1,297 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vatsal Varma | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vatsal Varma | Portfolio</title>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: "Segoe UI", sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-body {
-  background: #ffffff;
-  color: #222;
-}
+    body {
+      background: #ffffff;
+      color: #222;
+    }
 
-/* ================= NAVBAR ================= */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 60px;
-  background: linear-gradient(90deg, #0077ff, #0099ff);
-  box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
+    /* ================= NAVBAR ================= */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 60px;
+      background: linear-gradient(90deg, #0077ff, #0099ff);
+      box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 
-nav h2 {
-  color: white;
-  letter-spacing: 1px;
-}
+    nav h2 {
+      color: white;
+      letter-spacing: 1px;
+    }
 
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-/* ================= SECTIONS ================= */
-section {
-  padding: 120px 10%;
-  min-height: 100vh;
-}
+    /* ================= SECTIONS ================= */
+    section {
+      padding: 120px 10%;
+      min-height: 100vh;
+    }
 
-/* ================= HOME ================= */
-#home {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
+    /* ================= HOME ================= */
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
 
-.home-text h1 {
-  font-size: 65px;
-  color: black;
-}
+    .home-text h1 {
+      font-size: 65px;
+      color: black;
+    }
 
-.home-text h1 span {
-  color: #0077ff;
-}
+    .home-text h1 span {
+      color: #0077ff;
+    }
 
-.home-text p {
-  font-size: 18px;
-  margin: 20px 0;
-  max-width: 520px;
-}
+    .home-text p {
+      font-size: 18px;
+      margin: 20px 0;
+      max-width: 520px;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 14px 35px;
-  background: #0077ff;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(0,119,255,0.4);
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: #0077ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0, 119, 255, 0.4);
+    }
 
-.btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
-}
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 15px 40px rgba(0, 119, 255, 0.7);
+    }
 
-.home-img img {
-  width: 550px;
-  max-width: 100%;
-  animation: float 3s ease-in-out infinite;
-}
+    .home-img img {
+      width: 550px;
+      max-width: 100%;
+      animation: float 3s ease-in-out infinite;
+    }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
-  100% { transform: translateY(0); }
-}
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-18px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-/* ================= HEADINGS ================= */
-#about h2,
-#projects h2,
-#skills h2,
-#contact h2 {
-  font-size: 36px;
-  color: #0077ff;
-  margin-bottom: 20px;
-}
+    /* ================= HEADINGS ================= */
+    #about h2,
+    #projects h2,
+    #skills h2,
+    #contact h2 {
+      font-size: 36px;
+      color: #0077ff;
+      margin-bottom: 20px;
+    }
 
-/* ================= SKILLS (IMAGE STYLE CLUSTER) ================= */
-.skills-grid {
-  position: relative;
-  width: 520px;
-  height: 520px;
-  margin: 80px auto;
-}
+    /* ================= SKILLS ================= */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-.skill-box {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(145deg, #0a6bff, #2aa1ff);
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 20px 35px rgba(0,119,255,0.45);
-  animation: float 4s ease-in-out infinite;
-}
+    .skill-box {
+      width: 110px;
+      height: 110px;
+      background: rgba(0, 119, 255, 0.12);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.4);
+      animation: float 4s ease-in-out infinite;
+    }
 
-.skill-box img {
-  width: 48px;
-}
+    .skill-box img {
+      width: 60px;
+    }
 
-/* manual placement (like image) */
-.skill-box:nth-child(1) { top: 40%; left: 40%; transform: scale(1.2); }
-.skill-box:nth-child(2) { top: 15%; left: 45%; }
-.skill-box:nth-child(3) { top: 25%; left: 65%; }
-.skill-box:nth-child(4) { top: 45%; left: 70%; }
-.skill-box:nth-child(5) { top: 65%; left: 60%; }
-.skill-box:nth-child(6) { top: 70%; left: 40%; }
-.skill-box:nth-child(7) { top: 55%; left: 20%; }
-.skill-box:nth-child(8) { top: 30%; left: 20%; }
-.skill-box:nth-child(9) { top: 10%; left: 30%; }
-.skill-box:nth-child(10){ top: 75%; left: 25%; }
+    .skill-box:hover {
+      transform: translateY(-15px) scale(1.1);
+      box-shadow: 0 0 35px rgba(0, 119, 255, 0.7);
+    }
 
-/* Resume Button */
-.resume-btn {
-  margin-top: 60px;
-  text-align: center;
-}
+    .resume-btn {
+      margin-top: 50px;
+      text-align: center;
+    }
 
-/* ================= PROJECTS ================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
+    /* ================= PROJECTS ================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-.project {
-  background: rgba(0, 119, 255, 0.12);
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.4s;
-  box-shadow: 0 0 20px rgba(0,119,255,0.4);
-  animation: float 4s ease-in-out infinite;
-}
+    .project {
+      background: rgba(0, 119, 255, 0.12);
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.4s;
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.4);
+      animation: float 4s ease-in-out infinite;
+    }
 
-.project:hover {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 0 40px rgba(0,119,255,0.8);
-}
+    .project:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 0 40px rgba(0, 119, 255, 0.8);
+    }
 
-/* ================= CONTACT ================= */
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 80px;
-}
+    /* ================= CONTACT ================= */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
 
-.contact-icons a {
-  background: rgba(0,119,255,0.2);
-  padding: 22px;
-  border-radius: 50%;
-  box-shadow: 0 0 30px rgba(0,119,255,0.6);
-  animation: float 3s ease-in-out infinite;
-}
+    .contact-icons a {
+      background: rgba(0, 119, 255, 0.2);
+      padding: 22px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(0, 119, 255, 0.6);
+      animation: float 3s ease-in-out infinite;
+      transition: 0.3s;
+    }
 
-.contact-icons img {
-  width: 40px;
-}
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 45px rgba(0, 119, 255, 0.9);
+    }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-  }
-  .home-img img {
-    width: 320px;
-  }
-  .skills-grid {
-    transform: scale(0.8);
-  }
-}
-</style>
+    .contact-icons img {
+      width: 40px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      #home {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-img img {
+        width: 320px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <nav>
+    <h2>VATSAL</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <h2>VATSAL</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <section id="home">
+    <div class="home-text">
+      <h1>Hi, I'm <span>Vatsal Varma</span></h1>
+      <p>Full Stack Java Developer skilled in building scalable applications.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
 
-<section id="home">
-  <div class="home-text">
-    <h1>Hi, I'm <span>Vatsal Varma</span></h1>
-    <p>Full Stack Java Developer skilled in building scalable applications.</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </div>
-  <div class="home-img">
-    <img src="dev.png" alt="Developer">
-  </div>
-</section>
+    <div class="home-img">
+      <img src="dev.png" alt="Developer" />
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p> I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on experience in building scalable, high-performance web applications using Java, Spring Boot, and React. I have completed my B.E. in Computer Science & Engineering (2024) from Visvesvaraya Technological University, and gained real-world development experience during my internship at Kodnest, where I worked on full-stack projects involving RESTful APIs, databases, and modern frontend frameworks.</p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Vatsal Varma, a passionate Full Stack Java Developer with hands-on
+      experience in building scalable, high-performance web applications using
+      Java, Spring Boot, and React...
+    </p>
+    <br />
+    <p>
+      I have worked on real-world projects during my internship at Kodnest and
+      continuously improve my skills in Jenkins, Docker, and Kubernetes.
+    </p>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
-    <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div>
-  </div>
+  <section id="skills">
+    <h2>Skills</h2>
 
-  <div class="resume-btn">
-    <a href="Vatsal_Varma_Resume.pdf" download class="btn">Download Resume</a>
-  </div>
-</section>
+    <div class="skills-grid">
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /></div>
+      <div class="skill-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" /></div>
+    </div>
 
-<section id="projects">
-  <h2>Projects</h2>
-</section>
+    <div class="resume-btn">
+      <a href="Vatsal_Varma_Resume.pdf" download class="btn">Download Resume</a>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-icons">
-    <a href="https://github.com/vatsalvarma" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-    </a>
-    <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
-    </a>
-  </div>
-</section>
+  <section id="projects">
+    <h2>Projects</h2>
 
+    <div class="projects-grid">
+      <div class="project">
+        <h3>E-Commerce Website</h3>
+        <p>React + Spring Boot based platform with authentication.</p>
+      </div>
+
+      <div class="project">
+        <h3>Job Application System</h3>
+        <p>Microservices-based job portal.</p>
+      </div>
+
+      <div class="project">
+        <h3>Todo Application</h3>
+        <p>Task management using Spring Boot.</p>
+      </div>
+
+      <div class="project">
+        <h3>Chat Application</h3>
+        <p>Real-time chat using WebSockets.</p>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="project">
+      <a href="https://vatsalvarma.github.io/v-ecom.github.io/" target="_blank">
+        🚀 E-Commerce Website [click me]
+      </a>
+    </div>
+
+    <br />
+
+    <div class="project">
+      <a href="https://vatsalvarma.github.io/v-jobportal/" target="_blank">
+        💼 Job Portal [click me]
+      </a>
+    </div>
+
+    <br />
+
+    <div class="project">
+      <a href="https://vatsalvarma.github.io/v-gamestore/" target="_blank">
+        🎮 Game Store [click me]
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact-icons">
+      <a href="https://github.com/vatsalvarma" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+      </a>
+
+      <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+      </a>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
+
